@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Fira_Code } from "next/font/google";
+import { Fira_Code } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "@/components/Navbar/Navbar";
+import Navbar from "@/components/Navbar/Navbar";
 
 const firaCode = Fira_Code({
   variable: "--font-fira-code",

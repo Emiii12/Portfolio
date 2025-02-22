@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export const NavbarItems = () => {
+const NavbarItems = () => {
   const [active, setActive] = useState("home");
 
   const navItems = [
@@ -15,11 +15,11 @@ export const NavbarItems = () => {
     <nav>
       <ul className='flex space-x-16 text-base'>
         {navItems.map((item) => (
-          <li key={item.id} className='cursor-pointer' id={item.id}>
+          <li key={item.id} className='relative cursor-pointer group' id={item.id}>
             <a 
               href={item.href} 
               onClick={() => setActive(item.id)}
-              className={`text-silverGray group hover:text-white transition-colors duration-100 
+              className={`text-silverGray group-hover:text-white transition-colors duration-100 
                 ${active === item.id ? 'text-white' : ''}`} 
             >
               <span 
@@ -28,9 +28,15 @@ export const NavbarItems = () => {
               >#</span>
               {item.text}
             </a>
+            <span
+              className={`absolute bottom-0 left-0 h-[1px] bg-lightSeaGreen transition-all duration-300 origin-center 
+                ${active === item.id ? 'w-full ' : 'w-0 group-hover:w-full group-hover:left-0'}`}>
+            </span>
           </li>
         ))}
       </ul>
     </nav>
   );
 }
+
+export default NavbarItems;

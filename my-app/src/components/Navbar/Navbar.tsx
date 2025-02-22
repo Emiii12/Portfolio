@@ -1,12 +1,12 @@
 "use client"
 import React from 'react';
-import { NavbarItems } from './NavbarItems';
-import { SelectLanguage } from '../ui/Input/SelectLanguage';
+import NavbarItems from './NavbarComponents/NavbarItems';
+import SelectLanguage from './NavbarComponents/SelectLaguage';
 
-export const Navbar = () => {
+const Navbar = () => {
 
   return (
-    <div className='fixed w-full py-6 bg-coalBlue px-40'>
+    <div className='fixed w-full py-6 bg-coalBlue px-60 z-[1000] border-b-[1px] border-silverGray'>
       <header className='flex justify-between items-center'>
         <h1 className='text-white text-base'>
           Emilio Pereira<span className='text-lightSeaGreen'>.</span>	
@@ -20,4 +20,6 @@ export const Navbar = () => {
       </header>
     </div>
   );
-}
+};
+
+export default Navbar;

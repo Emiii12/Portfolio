@@ -13,7 +13,7 @@ export default {
         foreground: "var(--foreground)",
         charcoalBlue: "#14171b",
         coalBlue: "#21252b",
-        silverGray: "#8c919c",
+        silverGray: "#a1a2a7",
         lightSeaGreen: "#5ce1e6",
         aquaCyan: "#20b2aa",
         vibrantOrange: "ffa500",
