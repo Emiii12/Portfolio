@@ -16,7 +16,7 @@ export default {
         silverGray: "#a1a2a7",
         lightSeaGreen: "#5ce1e6",
         aquaCyan: "#20b2aa",
-        vibrantOrange: "ffa500",
+        vibrantOrange: "#ffa500",
       },
     },
   },

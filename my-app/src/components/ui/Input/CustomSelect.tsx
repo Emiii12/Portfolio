@@ -11,7 +11,9 @@ interface CustomSelectProps {
   value: string;
   onChange: (value: string) => void;
   icon?: React.ReactNode;
-  className?: string;
+  containerClass?: string; 
+  selectClass?: string; 
+  labelClass?: string;
   label?: string;
 }
 
@@ -20,20 +22,27 @@ export const CustomSelect: React.FC<CustomSelectProps> = ({
   value,
   onChange,
   icon,
-  className = '',
+  containerClass = '',
+  selectClass = '',
+  labelClass = '',
   label,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleChange = (newValue: string) => {
+    onChange(newValue); 
+    setIsOpen(false); 
+  };
+
   return (
-    <div className={`relative ${className}`}>
-      {label && <label className="block mb-2">{label}</label>}
+    <div className={`relative ${containerClass}`}>
+      {label && <label className={`block mb-2 ${labelClass}`}>{label}</label>}
       <select
         value={value}
-        onChange={(e) => onChange(e.target.value)}
+        onChange={(e) => handleChange(e.target.value)}
         onFocus={() => setIsOpen(true)}
         onBlur={() => setIsOpen(false)}
-        className='bg-coalBlue text-white rounded appearance-none px-2 py-1 pr-7 cursor-pointer'
+        className={`bg-coalBlue text-white w-full rounded appearance-none outline-none px-2 py-1 pr-7 cursor-pointer ${selectClass}`}
       >
         {options.map((option) => (
           <option key={option.value} value={option.value}>
