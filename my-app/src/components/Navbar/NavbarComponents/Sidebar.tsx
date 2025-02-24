@@ -15,17 +15,17 @@ const Sidebar = () => {
       initial={{ x: "-100%" }}
       animate={{ x: isSideBarActive ? 0 : "-100%" }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
-      className="fixed top-0 left-0 h-full w-full bg-coalBlue shadow-md z-[1001] p-7 space-y-7"
+      className="fixed top-0 left-0 h-full w-full lg:hidden bg-coalBlue shadow-md z-[1010] p-7 space-y-7 smx:w-1/2 md:w-[40%]"
     >
       <div className="flex justify-between items-center">
         <div className="flex">
-          <CommonTexts className="text-lg"/>
+          <CommonTexts className="text-[18px] xs:text-xl sm:text-2xl "/>
         </div>
         <button
           className="p-2 rounded-full hover:bg-silverGray hover:bg-opacity-20 transition-colors duration-150"
           onClick={toggleSidebar}
         >
-          <XMarkIcon className="text-lightSeaGreen w-6 h-6" />
+          <XMarkIcon className="text-lightSeaGreen w-5 h-5 sm:w-6 sm:h-6" />
         </button>
       </div>
       <SidebarItems />

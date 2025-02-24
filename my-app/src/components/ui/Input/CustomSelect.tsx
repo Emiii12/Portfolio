@@ -42,7 +42,7 @@ export const CustomSelect: React.FC<CustomSelectProps> = ({
         onChange={(e) => handleChange(e.target.value)}
         onFocus={() => setIsOpen(true)}
         onBlur={() => setIsOpen(false)}
-        className={`bg-coalBlue text-white w-full rounded appearance-none outline-none px-2 py-1 pr-7 cursor-pointer ${selectClass}`}
+        className={`bg-coalBlue text-white w-full appearance-none outline-none cursor-pointer ${selectClass}`}
       >
         {options.map((option) => (
           <option key={option.value} value={option.value}>
@@ -52,7 +52,7 @@ export const CustomSelect: React.FC<CustomSelectProps> = ({
       </select>
       {icon && (
         <div
-          className={`w-5 h-5 text-lightSeaGreen absolute right-1 top-1/2 transform -translate-y-1/2 transition-transform duration-150 ${
+          className={`w-5 h-5 text-lightSeaGreen absolute right-2 top-1/2 transform -translate-y-1/2 transition-transform duration-150 ${
             isOpen ? 'rotate-180' : ''
           }`}
         >

@@ -18,6 +18,7 @@ export const SelectLanguage = () => {
         { value: 'en', label: 'Inglés' },
       ]}
       icon={<ChevronDownIcon className="w-5 h-5 text-lightSeaGreen" />}
+      selectClass='pr-10 text-sm lg:text-base 2xl:text-lg'
     />
   );
 };
@@ -37,8 +38,8 @@ export const SelectLanguageSideBar = () => {
         { value: 'es', label: 'Español' },
         { value: 'en', label: 'Inglés' },
       ]}
-      icon={<ChevronDownIcon className="w-5 h-5 text-lightSeaGreen" />}
-      selectClass='text-lg px-0'
+      icon={<ChevronDownIcon className="w-4 h-4 text-lightSeaGreen xs:w-5 xs:h-5 sm:w-6 sm:h-6" />}
+      selectClass='text-base sm:text-xl xs:text-lg px-0 py-1 '
     />
   );
 }

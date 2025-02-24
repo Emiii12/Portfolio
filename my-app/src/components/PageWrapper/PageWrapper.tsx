@@ -7,7 +7,7 @@ interface PageWrapperProps {
 
 const PageWrapper = () => {
   return (
-    <div className='w-full px-60 max-lg:px-20'>
+    <div className='w-full px-6 2xl:px-52 xl:px-36 lg:px-24'>
       <main className="w-full h-screen flex justify-center items-center">
         <Home />
       </main>

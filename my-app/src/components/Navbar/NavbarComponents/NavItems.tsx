@@ -14,13 +14,13 @@ export const NavbarItems = () => {
 
   return (
     <nav>
-      <ul className="flex space-x-16 text-base">
+      <ul className="flex space-x-7 xl:space-x-9 2xl:space-x-12 sptext-base">
         {navItems.map((item) => (
           <li key={item.id} className="relative cursor-pointer group">
             <a
               href={item.href}
               onClick={() => setActive(item.id)}
-              className={`text-silverGray group-hover:text-white transition-colors duration-100 
+              className={`text-silverGray text-sm lg:text-base 2xl:text-lg group-hover:text-white transition-colors duration-100 
                 ${active === item.id ? "text-white" : ""}`}
             >
               <span
@@ -53,7 +53,7 @@ export const SidebarItems = () => {
             <a
               href={item.href}
               onClick={() => setActive(item.id)}
-              className="text-white text-xl inline-block relative pb-1 cursor-pointer"
+              className="text-white text-base sm:text-xl xs:text-lg inline-block relative pb-1 cursor-pointer"
             >
               <span className="text-lightSeaGreen">#</span>
               {item.text}
