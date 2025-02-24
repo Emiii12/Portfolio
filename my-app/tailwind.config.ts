@@ -8,6 +8,10 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "300px",
+        smx: "440px",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -16,7 +20,7 @@ export default {
         silverGray: "#a1a2a7",
         lightSeaGreen: "#5ce1e6",
         aquaCyan: "#20b2aa",
-        vibrantOrange: "ffa500",
+        vibrantOrange: "#ffa500",
       },
     },
   },
