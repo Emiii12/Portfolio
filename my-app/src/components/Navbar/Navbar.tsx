@@ -19,7 +19,7 @@ const Navbar = () => {
             className='flex left-6 p-[6px] absolute cursor-pointer rounded-full hover:bg-silverGray hover:bg-opacity-20 transition-colors duration-150 lg:hidden' 
             onClick={toggleSidebar}
           >
-            <Bars3Icon className='text-lightSeaGreen w-5 h-5 sm:w-6 sm:h-6 text-start' />
+            <Bars3Icon className='text-lightSeaGreen w-6 h-6 sm:w-7 sm:h-7 text-start' />
           </button>
           <CommonTexts className='text-[14px] sm:text-lg lg:text-lg xl:text-xl' />
           <div className='max-lg:hidden'>
